@@ -100,4 +100,8 @@
       linear-gradient(90deg, rgba(255, 85, 40, 0.04) 1px, transparent 1px);
     background-size: 50px 50px;
   }
+
+  .bg-radial {
+    background: radial-gradient(ellipse at center, var(--tw-gradient-from, rgba(255, 85, 40, 0.15)) 0%, var(--tw-gradient-via, transparent) 50%, var(--tw-gradient-to, transparent) 100%);
+  }
 }

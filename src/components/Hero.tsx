@@ -3,7 +3,7 @@ import { ArrowLeft, Sparkles, Play } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-24 md:py-32 pt-32">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-28 pt-32">
       {/* Background layers */}
       <div className="absolute inset-0 grid-bg" />
       <div className="absolute inset-0 radial-glow" />
@@ -35,18 +35,21 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-snug mb-8"
-        >
-          ابنِ مواقع فاخرة وأتمتة ذكية
-          <br />
-          <span className="text-gradient-orange">بقيمة 10,000 دولار</span>
-          <br />
-          <span className="text-gradient">بتكلفة اقتصادية</span>
-        </motion.h1>
+        <div className="relative">
+          <div className="absolute inset-0 -z-10 bg-radial from-[#FF5528]/15 via-transparent to-transparent blur-2xl scale-150" />
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.3] mb-8 text-white"
+          >
+            ابنِ مواقع فاخرة وأتمتة ذكية
+            <br />
+            <span className="text-[#FF5528]">بقيمة 10,000 دولار</span>
+            <br />
+            <span className="text-gradient">بتكلفة اقتصادية</span>
+          </motion.h1>
+        </div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -95,12 +98,12 @@ export default function Hero() {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="bg-[#18100C]/50 border border-[#2E1E17] rounded-xl p-4 backdrop-blur-sm text-center min-w-[120px]"
+              className="bg-[#18100C]/80 border border-[#2E1E17] rounded-2xl p-5 backdrop-blur-md hover:border-[#FF5528]/40 transition-all shadow-lg text-center min-w-[130px]"
             >
-              <div className="text-2xl md:text-3xl font-bold text-gradient-orange">
+              <div className="text-3xl font-bold text-[#FF5528]">
                 {stat.value}
               </div>
-              <div className="text-xs md:text-sm text-[#A3928B] mt-1.5">
+              <div className="text-sm text-gray-400 mt-1">
                 {stat.label}
               </div>
             </div>
