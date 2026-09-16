@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0E0907;
+    color: #FFFFFF;
+    font-family: 'Cairo', 'Tajawal', system-ui, sans-serif;
+    overflow-x: hidden;
+    direction: rtl;
+  }
+
+  ::selection {
+    background-color: rgba(255, 85, 40, 0.3);
+    color: #FFFFFF;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0E0907;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2E1E17;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF5528;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(24, 16, 12, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid #2E1E17;
+  }
+
+  .glass-card-hover {
+    background: rgba(24, 16, 12, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid #2E1E17;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .glass-card-hover:hover {
+    border-color: rgba(255, 85, 40, 0.4);
+    box-shadow: 0 0 30px rgba(255, 85, 40, 0.1), 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .glow-button {
+    background: linear-gradient(135deg, #FF5528, #FF7338);
+    box-shadow: 0 0 20px rgba(255, 85, 40, 0.4), 0 4px 16px rgba(255, 85, 40, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .glow-button:hover {
+    box-shadow: 0 0 30px rgba(255, 85, 40, 0.6), 0 6px 24px rgba(255, 85, 40, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FF7338 50%, #FF5528 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-orange {
+    background: linear-gradient(135deg, #FF7338, #FF5528);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .radial-glow {
+    background: radial-gradient(circle at center, rgba(255, 85, 40, 0.15) 0%, transparent 70%);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(255, 85, 40, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 85, 40, 0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
